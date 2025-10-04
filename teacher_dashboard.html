@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="header-card">
+      <div class="header-left">
+        <img id="teacher-photo" class="profile-photo" src="https://i.pravatar.cc/300?img=65" alt="teacher"/>
+        <div class="info-list">
+          <div class="name" id="teacher-name">Teacher</div>
+          <div class="meta" id="teacher-dept">Department</div>
+        </div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-weight:700;color:#444">Current Lecture:</div>
+        <div id="current-lecture" style="margin-top:8px;color:#ff9900;font-weight:700">Checking...</div>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="openTab('manage-attendance', this)">Attendance</button>
+      <button class="tab-button" onclick="openTab('manage-notes', this)">Notes</button>
+      <button class="tab-button" onclick="openTab('manage-notices', this)">Notices</button>
+      <button class="tab-button" onclick="openTab('manage-syllabus', this)">Syllabus</button>
+    </div>
+
+    <div id="manage-attendance" class="tab-content">
+      <h3>Mark Attendance</h3>
+      <div id="attendance-management"></div>
+    </div>
+
+    <div id="manage-notes" class="tab-content" style="display:none;">
+      <h3>Notes Management</h3>
+      <div style="margin-bottom:8px">
+        <input id="note-title" placeholder="Title" />
+        <select id="note-subject"></select>
+      </div>
+      <div>
+        <textarea id="note-content" rows="3" style="width:100%;"></textarea>
+      </div>
+      <div style="margin-top:8px">
+        <button id="add-note" class="small-btn">Add Note</button>
+      </div>
+      <div id="teacher-notes-list" style="margin-top:12px"></div>
+    </div>
+
+    <div id="manage-notices" class="tab-content" style="display:none;">
+      <h3>Notices</h3>
+      <div style="margin-bottom:8px" class="form-row">
+        <select id="notice-type"><option value="holiday">Holiday</option><option value="class_cancel">Class Cancel</option><option value="timing_change">Timing Change</option><option value="other">Other</option></select>
+        <input id="notice-title" placeholder="Title" />
+        <input id="notice-date" type="date"/>
+      </div>
+      <textarea id="notice-desc" rows="3" placeholder="Description" style="width:100%"></textarea>
+      <div style="margin-top:8px">
+        <button id="add-notice" class="small-btn">Add Notice</button>
+      </div>
+      <div id="teacher-notice-list" style="margin-top:12px"></div>
+    </div>
+
+    <div id="manage-syllabus" class="tab-content" style="display:none;">
+      <h3>Syllabus Management</h3>
+      <div class="form-row">
+        <select id="syll-subject"></select>
+        <select id="syll-type"><option value="complete">Complete</option><option value="preparation">Preparation</option></select>
+      </div>
+      <input id="syll-exam-name" placeholder="Exam Name (for preparation)" />
+      <textarea id="syll-content" rows="4" style="width:100%"></textarea>
+      <div style="margin-top:8px"><button id="add-syll" class="small-btn">Add/Update Syllabus</button></div>
+      <div id="teacher-syll-list" style="margin-top:12px"></div>
+    </div>
+
+  </div>
+
+  <script src="teacher_dashboard.js"></script>
+</body>
+</html>

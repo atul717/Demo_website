@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="top-section" class="header-card">
+      <div class="header-left">
+        <img id="stu-photo" class="profile-photo" src="" alt="photo" />
+        <div class="info-list">
+          <div class="name" id="stu-name">Name</div>
+          <div class="meta" id="stu-roll">Roll</div>
+          <div class="meta" id="stu-class">Class / Semester</div>
+        </div>
+      </div>
+      <div id="top-right" style="text-align:right">
+        <div style="font-weight:700;color:#444" id="top-sem">Semester: 5</div>
+        <div style="margin-top:8px;color:#666;font-size:14px">Logged in as Student</div>
+      </div>
+    </div>
+
+    <div class="tabs" id="tabs">
+      <button class="tab-button active" onclick="openTab('attendance', this)">Attendance</button>
+      <button class="tab-button" onclick="openTab('notes', this)">Notes</button>
+      <button class="tab-button" onclick="openTab('notice', this)">Notice</button>
+      <button class="tab-button" onclick="openTab('syllabus', this)">Syllabus</button>
+    </div>
+
+    <!-- Attendance -->
+    <div id="attendance" class="tab-content">
+      <h2>Attendance</h2>
+      <div id="subject-list"></div>
+      <div style="margin-top:12px">
+        <button class="small-btn" id="btn-overall">Show Overall Attendance</button>
+      </div>
+      <div style="margin-top:14px">
+        <canvas id="attendanceChart" width="260" height="260"></canvas>
+      </div>
+    </div>
+
+    <!-- Notes -->
+    <div id="notes" class="tab-content" style="display:none;">
+      <h2>Notes</h2>
+      <div id="notes-list"></div>
+    </div>
+
+    <!-- Notice -->
+    <div id="notice" class="tab-content" style="display:none;">
+      <h2>Notices</h2>
+      <h4>Holidays (semester: 21 July - 1 Dec)</h4>
+      <ul id="holiday-list"></ul>
+      <h4 style="margin-top:12px">Other Notices</h4>
+      <ul id="other-notice-list"></ul>
+    </div>
+
+    <!-- Syllabus -->
+    <div id="syllabus" class="tab-content" style="display:none;">
+      <h2>Syllabus</h2>
+      <h4>Preparation Syllabus / Upcoming Tests</h4>
+      <div id="prep-list"></div>
+      <h4 style="margin-top:10px">Complete Syllabus</h4>
+      <div id="complete-syllabus"></div>
+    </div>
+  </div>
+
+  <script src="student_dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Portal - Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="center-wrap">
+    <div class="choice-card">
+      <h2>Login as</h2>
+      <div class="role-buttons">
+        <button id="btn-student" class="role-btn">Student</button>
+        <button id="btn-teacher" class="role-btn">Teacher</button>
+      </div>
+
+      <form id="login-form" class="login-form" style="display:none;">
+        <h3 id="role-title">Student Login</h3>
+        <input id="email" type="email" placeholder="Email" required />
+        <input id="password" type="password" placeholder="Password" required />
+        <button id="login-btn" type="submit">Login</button>
+        <button id="signup-btn" type="button" class="alt">Sign up</button>
+        <p class="small">First time? Use Sign up to create a mock account (demo only).</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

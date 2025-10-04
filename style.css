@@ -1,0 +1,71 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+:root{
+  --primary:#4da6ff;
+  --primary-dark:#3399ff;
+  --soft:#e6f3ff;
+  --text:#1a1a1a;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  --success:#28a745;
+  --danger:#dc3545;
+}
+
+/* layout */
+body{font-family:'Poppins',sans-serif;background:#ffffff;color:var(--text);margin:0;padding:0}
+.center-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:30px}
+.choice-card{width:380px;background:#fff;border-radius:12px;box-shadow:var(--card-shadow);padding:28px;text-align:center}
+.role-buttons{display:flex;gap:12px;justify-content:center;margin:12px 0}
+.role-btn{flex:1;padding:12px;border-radius:8px;border:1px solid var(--soft);background:var(--soft);color:var(--primary);font-weight:600;cursor:pointer}
+.role-btn:hover{background:#dceeff}
+.login-form{margin-top:8px;text-align:center}
+.login-form input{width:100%;padding:12px;margin:10px 0;border-radius:8px;border:1px solid #dfeefc;box-sizing:border-box}
+.login-form input:focus{outline:2px solid rgba(77,166,255,0.3)}
+button{cursor:pointer}
+#login-btn{width:100%;padding:12px;border-radius:8px;border:none;background:var(--primary);color:#fff;font-weight:600}
+#signup-btn.alt{width:100%;padding:10px;border-radius:8px;border:1px solid var(--primary);background:#fff;color:var(--primary);margin-top:6px}
+.small{font-size:12px;color:#666;margin-top:8px}
+
+/* Dashboard common */
+.header-card{display:flex;align-items:center;justify-content:space-between;padding:16px;border-bottom:2px solid var(--soft);background:#fff;border-radius:10px}
+.header-left{display:flex;gap:14px;align-items:center}
+.profile-photo{width:110px;height:110px;border-radius:8px;object-fit:cover;border:2px solid var(--soft)}
+.info-list{display:flex;flex-direction:column;gap:6px}
+.info-list .name{font-size:20px;color:var(--primary)}
+.info-list .meta{font-size:14px;color:#444}
+
+/* tabs */
+.tabs{display:flex;gap:10px;margin-top:18px}
+.tab-button{padding:10px 14px;border-radius:8px;border:1px solid var(--soft);background:#fff;color:var(--primary);cursor:pointer;font-weight:600}
+.tab-button.active{background:var(--primary);color:#fff}
+.container{max-width:1100px;margin:18px auto;padding:20px}
+
+/* tab content */
+.tab-content{margin-top:16px;background:#fff;padding:16px;border-radius:10px;box-shadow:var(--card-shadow)}
+.subject-card{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:8px;border-left:6px solid #ccc;margin-bottom:10px;background:#f9fbff}
+.sub-left{display:flex;flex-direction:column}
+.sub-title{font-weight:700}
+.sub-meta{font-size:13px;color:#555}
+
+/* subject colors - example mapping */
+.sub-math{border-left-color:#ff9933}
+.sub-cn{border-left-color:#33cc33}
+.sub-os{border-left-color:#9966ff}
+.sub-db{border-left-color:#3399ff}
+.sub-web{border-left-color:#ff66b3}
+.sub-eng{border-left-color:#ffd633}
+
+/* buttons small */
+.small-btn{padding:8px 10px;border-radius:8px;border:1px solid var(--soft);background:var(--soft);cursor:pointer}
+.action-row{display:flex;gap:10px;align-items:center}
+
+/* status */
+.status-high{color:var(--success);font-weight:700}
+.status-low{color:var(--danger);font-weight:700}
+
+/* forms used by teacher */
+.form-row{display:flex;gap:8px;margin:8px 0}
+.form-row input, .form-row select, .form-row textarea{padding:8px;border-radius:8px;border:1px solid #e6eef8}
+
+/* responsive */
+@media (max-width:800px){
+  .header-card{flex-direction:column;gap:12p
